@@ -335,40 +335,40 @@
 !(function () {
     //for now,data has to be added manually.
   var data = [
-    { eventName: "Lunch Meeting w/ Mark", calendar: "Work", color: "orange" },
+    { eventName: "Lunch Meeting w/ Mark", calendar: "Study", color: "orange" },
     {
       eventName: "Interview - Jr. Web Developer",
-      calendar: "Work",
+      calendar: "Study",
       color: "orange",
     },
     {
       eventName: "Demo New App to the Board",
-      calendar: "Work",
+      calendar: "Study",
       color: "orange",
     },
-    { eventName: "Dinner w/ Marketing", calendar: "Work", color: "orange" },
+    { eventName: "Dinner w/ Marketing", calendar: "Study", color: "orange" },
 
     { eventName: "Game vs Portalnd", calendar: "Sports", color: "blue" },
     { eventName: "Game vs Houston", calendar: "Sports", color: "blue" },
     { eventName: "Game vs Denver", calendar: "Sports", color: "blue" },
     { eventName: "Game vs San Degio", calendar: "Sports", color: "blue" },
 
-    { eventName: "School Play", calendar: "Kids", color: "yellow" },
+    { eventName: "School Play", calendar: "Exam", color: "yellow" },
     {
       eventName: "Parent/Teacher Conference",
-      calendar: "Kids",
+      calendar: "Exam",
       color: "yellow",
     },
     {
       eventName: "Pick up from Soccer Practice",
-      calendar: "Kids",
+      calendar: "Exam",
       color: "yellow",
     },
-    { eventName: "Ice Cream Night", calendar: "Kids", color: "yellow" },
+    { eventName: "Ice Cream Night", calendar: "Exam", color: "yellow" },
 
     { eventName: "Free Tamale Night", calendar: "Other", color: "green" },
     { eventName: "Bowling Team", calendar: "Other", color: "green" },
-    { eventName: "Teach Kids to Code", calendar: "Other", color: "green" },
+    { eventName: "Teach Exam to Code", calendar: "Other", color: "green" },
     { eventName: "Startup Weekend", calendar: "Other", color: "green" },
   ];
 
