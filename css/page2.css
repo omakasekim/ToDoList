@@ -163,7 +163,6 @@ html {
     margin-bottom: 20px;
   }
   
-  /* Add this below the other styles */
   .todo-list:empty {
     display: none;
   }
