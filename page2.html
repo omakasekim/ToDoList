@@ -8,25 +8,75 @@
     <title>Todo List</title>
   </head>
   <body>
-
-      <div class="container">
-        <div class="daily-container"></div>
-        <div class="monthly-container"></div>
-
-        <div class="todolist-container">
-          <h2>Feed</h2>
-          <p>
-            <label for="new-task">Add Item</label
-            ><input id="new-task" type="text" /><button>Add</button>
-          </p>
-
-          <h3>Todo</h3>
-          <ul id="incomplete-tasks"></ul>
-
-          <h3>Completed</h3>
-          <ul id="completed-tasks"></ul>
+    <div class="container">
+      <div class="daily-container"></div>
+      <div class="monthly-container">
+        <div id="calendar">
+          <h1>May</h1>
+          <table>
+            <tr>
+              <td class="lastmonth">30</td>
+              <td class="current">1</td>
+              <td>2</td>
+              <td>3</td>
+              <td class="hastask">4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>8</td>
+              <td class="hastask">9</td>
+              <td>10</td>
+              <td>11</td>
+              <td class="hastask">12</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td class="hastask">15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td class="hastask">21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td class="hastask">26</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>29</td>
+              <td class="hastask">30</td>
+              <td>31</td>
+              <td class="nextmonth">1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+          </table>
         </div>
       </div>
+
+      <div class="todolist-container">
+        <h2>Feed</h2>
+        <p>
+          <label for="new-task">Add Item</label
+          ><input id="new-task" type="text" /><button>Add</button>
+        </p>
+
+        <h3>Todo</h3>
+        <ul id="incomplete-tasks"></ul>
+
+        <h3>Completed</h3>
+        <ul id="completed-tasks"></ul>
+      </div>
+    </div>
 
     <script src="/js/page2.js"></script>
   </body>
