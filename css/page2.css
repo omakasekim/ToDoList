@@ -1,11 +1,11 @@
 /* Basic Style */
 
-@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
 
 body {
   box-sizing: border-box;
-  background: #03C9A9;
- 
+  background: #03c9a9;
+
   color: #333;
   font-family: Lato, sans-serif;
 }
@@ -31,11 +31,13 @@ ul {
 li * {
   float: left;
 }
-li, h3 {
-  clear:both;
-  list-style:none;
+li,
+h3 {
+  clear: both;
+  list-style: none;
 }
-input, button {
+input,
+button {
   outline: none;
 }
 button {
@@ -53,7 +55,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for='new-task'] {
+label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -79,7 +81,7 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for='new-task'] {
+label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
@@ -88,7 +90,7 @@ input#new-task {
   width: 736px;
 }
 p > button:hover {
-  color: #0FC57C;
+  color: #0fc57c;
 }
 
 /* Task list */
@@ -108,11 +110,11 @@ li > label {
   width: 650px;
   padding: 0 0 0 11px;
 }
-li >  input[type="text"] {
+li > input[type="text"] {
   width: 226px;
 }
 li > .delete:hover {
-  color: #CF2323;
+  color: #cf2323;
 }
 
 /* Completed */
@@ -122,14 +124,14 @@ li > .delete:hover {
 }
 
 /* Edit Task */
-ul li input[type=text] {
-  display:none;
+ul li input[type="text"] {
+  display: none;
 }
 
-ul li.editMode input[type=text] {
-  display:block;
+ul li.editMode input[type="text"] {
+  display: block;
 }
 
 ul li.editMode label {
-  display:none;
+  display: none;
 }

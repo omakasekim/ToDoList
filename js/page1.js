@@ -17,7 +17,7 @@ var monthText = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 var indexMonth = month;
 var todayBtn = $(".c-today__btn");
@@ -28,12 +28,10 @@ var winCreator = $(".js-event__creator");
 var inputDate = $(this).data();
 today = year + "-" + month + "-" + day;
 
-
-
 // ------ functions control -------
 
 //button of the current day
-todayBtn.on("click", function() {
+todayBtn.on("click", function () {
   if (month < indexMonth) {
     var step = indexMonth % month;
     movePrev(step, true);
@@ -44,7 +42,7 @@ todayBtn.on("click", function() {
 });
 
 //higlight the cel of current day
-dataCel.each(function() {
+dataCel.each(function () {
   if ($(this).data("day") === today) {
     $(this).addClass("isToday");
     fillEventSidebar($(this));
@@ -52,10 +50,10 @@ dataCel.each(function() {
 });
 
 //window event creator
-addBtn.on("click", function() {
+addBtn.on("click", function () {
   winCreator.addClass("isVisible");
   $("body").addClass("overlay");
-  dataCel.each(function() {
+  dataCel.each(function () {
     if ($(this).hasClass("isSelected")) {
       today = $(this).data("day");
       document.querySelector('input[type="date"]').value = today;
@@ -64,19 +62,17 @@ addBtn.on("click", function() {
     }
   });
 });
-closeBtn.on("click", function() {
+closeBtn.on("click", function () {
   winCreator.removeClass("isVisible");
   $("body").removeClass("overlay");
 });
-saveBtn.on("click", function() {
+saveBtn.on("click", function () {
   var inputName = $("input[name=name]").val();
   var inputDate = $("input[name=date]").val();
   var inputNotes = $("textarea[name=notes]").val();
-  var inputTag = $("select[name=tags]")
-    .find(":selected")
-    .text();
+  var inputTag = $("select[name=tags]").find(":selected").text();
 
-  dataCel.each(function() {
+  dataCel.each(function () {
     if ($(this).data("day") === inputDate) {
       if (inputName != null) {
         $(this).attr("data-name", inputName);
@@ -106,54 +102,50 @@ function fillEventSidebar(self) {
   var thisBirthday = self.hasClass("event--birthday");
   var thisFestivity = self.hasClass("event--festivity");
   var thisEvent = self.hasClass("event");
-  
+
   switch (true) {
     case thisImportant:
       $(".c-aside__eventList").append(
         "<p class='c-aside__event c-aside__event--important'>" +
-        thisName +
-        " <span> • " +
-        thisNotes +
-        "</span></p>"
+          thisName +
+          " <span> • " +
+          thisNotes +
+          "</span></p>"
       );
       break;
     case thisBirthday:
       $(".c-aside__eventList").append(
         "<p class='c-aside__event c-aside__event--birthday'>" +
-        thisName +
-        " <span> • " +
-        thisNotes +
-        "</span></p>"
+          thisName +
+          " <span> • " +
+          thisNotes +
+          "</span></p>"
       );
       break;
     case thisFestivity:
       $(".c-aside__eventList").append(
         "<p class='c-aside__event c-aside__event--festivity'>" +
-        thisName +
-        " <span> • " +
-        thisNotes +
-        "</span></p>"
+          thisName +
+          " <span> • " +
+          thisNotes +
+          "</span></p>"
       );
       break;
     case thisEvent:
       $(".c-aside__eventList").append(
         "<p class='c-aside__event'>" +
-        thisName +
-        " <span> • " +
-        thisNotes +
-        "</span></p>"
+          thisName +
+          " <span> • " +
+          thisNotes +
+          "</span></p>"
       );
       break;
-   }
-};
-dataCel.on("click", function() {
+  }
+}
+dataCel.on("click", function () {
   var thisEl = $(this);
-  var thisDay = $(this)
-  .attr("data-day")
-  .slice(8);
-  var thisMonth = $(this)
-  .attr("data-day")
-  .slice(5, 7);
+  var thisDay = $(this).attr("data-day").slice(8);
+  var thisMonth = $(this).attr("data-day").slice(5, 7);
 
   fillEventSidebar($(this));
 
@@ -162,17 +154,16 @@ dataCel.on("click", function() {
 
   dataCel.removeClass("isSelected");
   thisEl.addClass("isSelected");
-
 });
 
 //function for move the months
 function moveNext(fakeClick, indexNext) {
   for (var i = 0; i < fakeClick; i++) {
     $(".c-main").css({
-      left: "-=100%"
+      left: "-=100%",
     });
     $(".c-paginator__month").css({
-      left: "-=100%"
+      left: "-=100%",
     });
     switch (true) {
       case indexNext:
@@ -184,10 +175,10 @@ function moveNext(fakeClick, indexNext) {
 function movePrev(fakeClick, indexPrev) {
   for (var i = 0; i < fakeClick; i++) {
     $(".c-main").css({
-      left: "+=100%"
+      left: "+=100%",
     });
     $(".c-paginator__month").css({
-      left: "+=100%"
+      left: "+=100%",
     });
     switch (true) {
       case indexPrev:
@@ -201,13 +192,13 @@ function movePrev(fakeClick, indexPrev) {
 function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
   switch (true) {
     case next:
-      $(buttonId).on("click", function() {
+      $(buttonId).on("click", function () {
         if (indexMonth >= 2) {
           $(mainClass).css({
-            left: "+=100%"
+            left: "+=100%",
           });
           $(monthClass).css({
-            left: "+=100%"
+            left: "+=100%",
           });
           indexMonth -= 1;
         }
@@ -215,13 +206,13 @@ function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
       });
       break;
     case prev:
-      $(buttonId).on("click", function() {
+      $(buttonId).on("click", function () {
         if (indexMonth <= 11) {
           $(mainClass).css({
-            left: "-=100%"
+            left: "-=100%",
           });
           $(monthClass).css({
-            left: "-=100%"
+            left: "-=100%",
           });
           indexMonth += 1;
         }
