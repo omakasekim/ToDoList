@@ -2,9 +2,18 @@
 
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
 
+:root{
+  --hue: 223;
+  --bg1: hsl(var(--hue),10%,90%);
+  --bg2: hsl(var(--hue),10%,80%);
+  --fg1: hsl(var(--hue),10%,10%);
+  --fg2: hsl(var(--hue),10%,20%);
+  --primary: hsl(var(--hue),90%,55%);
+  --greeny:#03c9a9;
+}
 body {
   box-sizing: border-box;
-  background: #03c9a9;
+  background: var(--greeny);
 
   color: #333;
   font-family: Lato, sans-serif;
