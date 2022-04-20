@@ -17,7 +17,7 @@
      -ms-user-select: none;
      user-select: none;
     }
-    
+
     .container{
       display: flex;
       margin-top: 10vh;
@@ -78,7 +78,9 @@
     }
     
     .month.new {
+      animation: fadeIn 1s ease-out;
       -webkit-animation: fadeIn 1s ease-out;
+      -moz-animation: fadeIn 1s ease-out;
       opacity: 1;
     }
     
@@ -296,7 +298,7 @@
     .entry.green:after { background: rgba(153, 198, 109, 1); }
     .entry.yellow:after { background: rgba(249, 233, 0, 1); }
     
-    /* Animations are cool!  */
+    
     @-webkit-keyframes moveFromTopFade {
       from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
     }
