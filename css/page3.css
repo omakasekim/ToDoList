@@ -168,7 +168,6 @@ li span {
     font-size: 50px;
   }
 }
-
 .bgImage {
   position: absolute;
   top: 0;
@@ -177,4 +176,17 @@ li span {
   height: 100%;
   z-index: -1;
   animation: fadeIn 500ms linear;
+}
+
+.navbutton {
+  background-color: wheat;
+  border-radius: 15%;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;
 }

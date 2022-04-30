@@ -144,3 +144,19 @@ ul li.editMode input[type="text"] {
 ul li.editMode label {
   display: none;
 }
+
+
+/*navbar*/
+
+.navbutton {
+  background-color: wheat;
+  border-radius: 15%;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;
+}
