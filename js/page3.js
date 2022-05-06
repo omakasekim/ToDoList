@@ -24,7 +24,8 @@ const day = hour * 24;
 
 // Set Date Input Min with Todays's Date
 const today = new Date().toISOString().split("T")[0];
-dateEl.setAttribute("min", today);
+dateEl?.setAttribute("min", today);
+
 
 // Populate countdown / complete UI
 function updateDOM() {
@@ -105,9 +106,9 @@ function restorePreviousCountdown() {
 }
 
 // Event Listeners
-countdownForm.addEventListener("submit", updateCountdown);
-countdownBtn.addEventListener("click", reset);
-completeBtn.addEventListener("click", reset);
+countdownForm?.addEventListener("submit", updateCountdown);
+countdownBtn?.addEventListener("click", reset);
+completeBtn?.addEventListener("click", reset);
 
 // On load, check localStorage
 restorePreviousCountdown();
